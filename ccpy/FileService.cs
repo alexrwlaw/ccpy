@@ -11,14 +11,14 @@ namespace ccpy
 {
     class FileService
     {
-        public void LoadFiles(BindingSource bindingSource)
+        public void LoadFiles(BindingSource bindingSource, string folderPath)
         {
-            string[] files = Directory.GetFiles(@"D:\iTunes Media\Music", "*.*", SearchOption.AllDirectories);
+            string[] files = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories);
 
             DataTable dataTable = new DataTable();
 
             dataTable.Columns.Add("Name", typeof(string));
-            dataTable.Columns.Add("Size", typeof(int));
+            dataTable.Columns.Add("Size", typeof(long));
             dataTable.Columns.Add("Date", typeof(DateTime));
 
             foreach (string file in files)
