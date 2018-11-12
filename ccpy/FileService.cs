@@ -13,7 +13,7 @@ namespace ccpy
     {
         public void LoadFiles(BindingSource bindingSource, string folderPath)
         {
-            string[] files = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories);
+            IEnumerable<string> files = Directory.EnumerateFiles(folderPath, "*.*", SearchOption.AllDirectories);
 
             DataTable dataTable = new DataTable();
 

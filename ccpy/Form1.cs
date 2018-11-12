@@ -35,6 +35,8 @@ namespace ccpy
 
                 LoadFiles(bindingSource1, folderBrowserDialog1.SelectedPath);
             }
+
+            this.ActiveControl = null;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -45,6 +47,8 @@ namespace ccpy
 
                 LoadFiles(bindingSource2, folderBrowserDialog2.SelectedPath);
             }
+
+            this.ActiveControl = null;
         }
 
         private void LoadFiles(BindingSource bindingSource, string folderPath)
